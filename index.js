@@ -2,6 +2,6 @@
 const makeHTML = require('./src/generateHTML');
 
 // Team profiles
-const manager = require('./library/manager');
-const engineer = require('./library/engineer')
-const intern = require('./library/intern')
+const manager = require('./lib/manager');
+const engineer = require('./lib/engineer')
+const intern = require('./lib/intern')
