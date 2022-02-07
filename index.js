@@ -2,9 +2,9 @@
 const makeHTML = require('./src/generateHTML');
 
 // Team profiles
-const manager = require('./lib/manager');
-const engineer = require('./lib/engineer')
-const intern = require('./lib/intern')
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer')
+const Intern = require('./lib/intern')
 
 // node modules
 const fs = require('fs');
@@ -38,7 +38,6 @@ const addManager = () => {
                     console.log ("Please enter manager's ID!")
                     return false;
                 } else {
-                    console.log ("Please enter the manager's name!");
                     return true;
                 }
             }
@@ -74,10 +73,10 @@ const addManager = () => {
     ])
     .then(managerInput => {
         const { name, id, email, officeNumber } = managerInput;
-        const manager = new Manger (name, id, email, officeNumber);
+        const manager = new Manager (name, id, email, officeNumber);
 
         teamArray.push(manager);
-        console.log(manger);
+        console.log(manager);
     })
 };
 
@@ -109,7 +108,7 @@ const addEmployee = () => {
             name: 'id',
             message: "Please enter employee's ID.",
             validate: nameInput => {
-                if (isNaN(nameInout)) {
+                if (isNaN(nameInput)) {
                     console.log ("Please enter employee's ID!")
                     return false;
                 } else {
