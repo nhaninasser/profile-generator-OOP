@@ -34,7 +34,7 @@ const addManager = () => {
             name: 'id',
             message: "Please enter manager's ID.",
             validate: nameInput => {
-                if (isNaN(nameInout)) {
+                if (isNaN(nameInput)) {
                     console.log ("Please enter manager's ID!")
                     return false;
                 } else {
@@ -220,3 +220,5 @@ addManager()
   .catch(err => {
  console.log(err);
   });
+
+  
